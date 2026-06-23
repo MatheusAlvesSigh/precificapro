@@ -8,61 +8,20 @@ import TikTok from "./pages/TikTok";
 
 import logo from "./assets/logo.png";
 import mlLogo from "./assets/mercadolivre.png";
-import shopeeLogo from "./assets/Shopee.png";
-import tiktokLogo from "./assets/Tiktok.png";
+import shopeeLogo from "./assets/shopee.png";
+import tiktokLogo from "./assets/tiktok.png";
 
 export default function App() {
   return (
     <BrowserRouter>
-      <div
-        style={{
-          display: "flex",
-          minHeight: "100vh",
-        }}
-      >
-        <aside
-          style={{
-            width: "260px",
-            background:
-              "linear-gradient(180deg, #0f172a, #020617)",
-            color: "white",
-            padding: "20px",
-          }}
-        >
-          <div
-            style={{
-              textAlign: "center",
-              marginBottom: "30px",
-            }}
-          >
-            <img
-              src={logo}
-              alt="Loja Sigh"
-              style={{
-                width: "120px",
-                maxWidth: "100%",
-                marginBottom: "12px",
-              }}
-            />
-
-            <h2
-              style={{
-                color: "white",
-                margin: 0,
-                fontSize: "24px",
-              }}
-            >
-              Loja Sigh
-            </h2>
+      <div style={{ display: "flex", minHeight: "100vh" }}>
+        <aside style={sidebarStyle}>
+          <div style={brandStyle}>
+            <img src={logo} alt="Loja Sigh" style={brandLogoStyle} />
+            <h2 style={titleStyle}>Loja Sigh</h2>
           </div>
 
-          <nav
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "12px",
-            }}
-          >
+          <nav style={navStyle}>
             <Link to="/" style={linkStyle}>
               <span>📊</span>
               Dashboard
@@ -74,48 +33,27 @@ export default function App() {
             </Link>
 
             <Link to="/mercadolivre" style={linkStyle}>
-              <img
-                src={mlLogo}
-                alt="Mercado Livre"
-                style={logoStyle}
-              />
+              <img src={mlLogo} alt="Mercado Livre" style={logoStyle} />
               Mercado Livre
             </Link>
 
             <Link to="/shopee" style={linkStyle}>
-              <img
-                src={shopeeLogo}
-                alt="Shopee"
-                style={logoStyle}
-              />
+              <img src={shopeeLogo} alt="Shopee" style={logoStyle} />
               Shopee
             </Link>
 
             <Link to="/tiktok" style={linkStyle}>
-              <img
-                src={tiktokLogo}
-                alt="TikTok"
-                style={logoStyle}
-              />
+              <img src={tiktokLogo} alt="TikTok" style={logoStyle} />
               TikTok Shop
             </Link>
           </nav>
         </aside>
 
-        <main
-          style={{
-            flex: 1,
-            padding: "30px",
-            background: "#F3F4F6",
-          }}
-        >
+        <main style={mainStyle}>
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/produtos" element={<Produtos />} />
-            <Route
-              path="/mercadolivre"
-              element={<MercadoLivre />}
-            />
+            <Route path="/mercadolivre" element={<MercadoLivre />} />
             <Route path="/shopee" element={<Shopee />} />
             <Route path="/tiktok" element={<TikTok />} />
           </Routes>
@@ -124,6 +62,42 @@ export default function App() {
     </BrowserRouter>
   );
 }
+
+const sidebarStyle = {
+  width: "260px",
+  background: "linear-gradient(180deg, #0f172a, #020617)",
+  color: "white",
+  padding: "20px",
+};
+
+const brandStyle = {
+  textAlign: "center",
+  marginBottom: "30px",
+};
+
+const brandLogoStyle = {
+  width: "120px",
+  maxWidth: "100%",
+  marginBottom: "12px",
+};
+
+const titleStyle = {
+  color: "white",
+  margin: 0,
+  fontSize: "24px",
+};
+
+const navStyle = {
+  display: "flex",
+  flexDirection: "column",
+  gap: "12px",
+};
+
+const mainStyle = {
+  flex: 1,
+  padding: "30px",
+  background: "#F3F4F6",
+};
 
 const linkStyle = {
   color: "white",
