@@ -8,8 +8,8 @@ import TikTok from "./pages/TikTok";
 
 import logo from "./assets/logo.png";
 import mlLogo from "./assets/mercadolivre.png";
-import shopeeLogo from "./assets/shopee.png";
-import tiktokLogo from "./assets/tiktok.png";
+import shopeeLogo from "./assets/Shopee.png";
+import tiktokLogo from "./assets/Tiktok.png";
 
 export default function App() {
   return (
