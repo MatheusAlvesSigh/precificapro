@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import logoShopee from "../assets/shopee.png";
+import logoShopee from "../assets/Shopee.png";
 
 export default function Shopee() {
   const [produtos, setProdutos] = useState([]);

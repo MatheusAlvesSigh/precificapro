@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import logoTikTok from "../assets/tiktok.png";
+import logoTikTok from "../assets/Tiktok.png";
 
 export default function TikTokShop() {
   const [produtos, setProdutos] = useState([]);
